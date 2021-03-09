@@ -12,5 +12,5 @@ jobs:
         with:
           username: muhzilla
           password: ${{ secrets.DOCKERPW }}
-      - run: docker build . -t ${{ secrets.REGISTRY }}/sample:$GITHUB_RUN_NUMBER
+      - run: docker build . --tag ${{ secrets.REGISTRY }}/sample:$GITHUB_RUN_NUMBER
       - run: docker push ${{ secrets.REGISTRY }}/sample:$GITHUB_RUN_NUMBER
