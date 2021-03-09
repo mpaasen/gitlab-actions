@@ -22,7 +22,6 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'      
-      
   deploy:
     needs: build
     runs-on: ubuntu-latest
